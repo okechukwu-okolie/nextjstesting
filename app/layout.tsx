@@ -29,17 +29,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ml-5`}
-      >
-        <div className="flex gap-15  mt-5">
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ml-5`}>
+        {/* <div className="flex gap-15  mt-5">
 
             <Link href={'/'}>Home</Link>
             <Link href={'/portfolio'}>Portfolio <span><BsSuitcase2/></span> </Link>
             <Link href={'/testimonial'}>Testimonial<FaScroll/></Link>
             <Link href={'/contact'}>Contact</Link>
             <Link href={'users'}>Users</Link>
-        </div>
+        </div> */}
+        <header className="bg-blue-400 p-[1rem]">
+          <p>Header</p>
+        </header>
+
+
         {children}
+
+        <footer className="bg-pink-200 p-[1rem] text-black">footer</footer>
       </body>
     </html>
   );

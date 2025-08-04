@@ -1,5 +1,5 @@
-// 'use client'
-import {Button} from '@/app/users/button'
+'use client'
+
 
 import React from 'react'
 
@@ -10,7 +10,7 @@ export default async function Users() {
     console.log(posts)
     return (
         <div>
-            <Button/>
+        
         {posts.map((post: {id:number, name: string})=>{
                 <div>
                     <p>{post.name}</p>
