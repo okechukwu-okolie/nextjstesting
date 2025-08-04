@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import { BsSuitcase2 } from "react-icons/bs";
+import Testimonial from "./testimonial/page";
+import { FaScroll } from "react-icons/fa";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ml-5`}
       >
+        <div className="flex gap-15  mt-5">
+
+            <Link href={'/'}>Home</Link>
+            <Link href={'/portfolio'}>Portfolio <span><BsSuitcase2/></span> </Link>
+            <Link href={'/testimonial'}>Testimonial<FaScroll/></Link>
+            <Link href={'/contact'}>Contact</Link>
+            <Link href={'users'}>Users</Link>
+        </div>
         {children}
       </body>
     </html>
